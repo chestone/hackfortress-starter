@@ -3,8 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log('FOO');
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Hackfortress Puzzle Starter' });
 });
 
 module.exports = router;
