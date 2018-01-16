@@ -1,8 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: rgb(106, 69, 52);
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: rgb(193, 161, 138);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.break {
+  margin-top: 25px;
+}
+
+.header__container {
+  border-bottom: 0.25rem solid;
+  grid-area: header;
+}
+
+.header__title {
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.toggle__close,
+.header__nav-toggle {
+  background: rgb(106, 69, 52);
+  border: none;
+  color: white;
+  height: 3rem;
+  width: 4rem;
+}
+
+.header__container .header__item {
+  display: inline-block;
+}
+
+.nav__container {
+  grid-area: nav;
+  background: rgb(106,69,52);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  left: -340px;
+  transition: transform .3s ease-in-out;
+  z-index: 1;
+}
+
+.toggleNav {
+  transform: translateX(340px);
+}
+
+.toggle__close {
+  color: rgb(254, 253, 253);
+  padding: 20px;
+}
+
+.nav__list .nav__list-item {
+  padding: 10px 20px;
+  color: rgb(254, 253, 253);
+}
+
+.content {
+  grid-area: content;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+}
+
+.content__main,
+.content__timeline {
+  grid-column: span 4;
+}
+
+.content a {
+  text-decoration: underline;
+}
+
+.footer__container {
+  grid-area: footer;
+  padding: 1.5% 0;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+@media only screen and (min-width : 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container header,
+  .container nav,
+  .container main, 
+  .container footer {
+    grid-column: span 4;
+  }
+
+  .content {
+    padding: 0 10%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .content__main {
+    grid-column: span 3;
+  }
+
+  .content__timeline {
+    grid-column: span 1;
+  }
 }

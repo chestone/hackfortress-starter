@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/bootstrap-reboot.css' />
-    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include('head', {title: title}); %>
   <body>
-    <main class="wrapper">
-      <header><%= title %></header>
+    <main class="container">
+      <%- include('header', {title: title}); %>
       <section class="content">
-      
       </section>
-      <footer>
-        Hackfortress Inc. Copyright Whatever
-      </footer>
+      <%- include('footer'); %>
     </main>
-    <script src='/javascripts/jquery.min.js'></script>
-    <script src='/javascripts/bootstrap.min.js'></script>
-    <script src='/javascripts/index.js'></script>
+    <%- include('scripts') %>
   </body>
 </html>
