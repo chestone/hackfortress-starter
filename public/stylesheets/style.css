@@ -78,15 +78,6 @@ ul {
 
 .content {
   grid-area: content;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 25px;
-}
-
-.content__main,
-.content__timeline {
-  grid-column: span 4;
 }
 
 .content a {
@@ -117,7 +108,7 @@ ul {
 
   .container header,
   .container nav,
-  .container main, 
+  .container section, 
   .container footer {
     grid-column: span 4;
   }
