@@ -4,7 +4,7 @@ var utils = require('./utils/routes');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  utils.allowUnsafe(res).render('index', { title: 'Hackfortress Puzzle Starter' });
+  utils.allowUnsafe(res).render('pages/index', { title: 'Hackfortress Puzzle Starter' });
 });
 
 module.exports = router;

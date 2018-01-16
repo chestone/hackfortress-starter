@@ -4,4 +4,4 @@ WORKDIR /opt/app
 RUN npm i
 ENV VIRTUAL_HOST app.web.hackfortress.net
 EXPOSE 3000
-CMD node app.js
+CMD node bin/www

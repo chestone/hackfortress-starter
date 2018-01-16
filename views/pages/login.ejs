@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <%- include('head', {title: title}); %>
+  <%- include('../snippets/head', {title: title}); %>
   <body>
     <main class="container">
-      <%- include('header', {title: title}); %>
-      <%- include('nav'); %>
+      <%- include('../snippets/header', {title: title}); %>
+      <%- include('../snippets/nav'); %>
       <section class="content">
         <form>
           <div class="form-group">
@@ -23,8 +23,8 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </section>
-      <%- include('footer'); %>
+      <%- include('../snippets/footer'); %>
     </main>
-    <%- include('scripts') %>
+    <%- include('../snippets/scripts') %>
   </body>
 </html>
