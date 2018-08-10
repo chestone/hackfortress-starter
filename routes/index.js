@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var utils = require('./utils/routes');
+const express = require('express');
+const router = express.Router();
+const utils = require('./utils/routes');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
