@@ -1,12 +1,13 @@
 {
   "name": "hackfortress-starter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
+    "debug": "DEBUG=hackfortress-starter:server node --inspect ./bin/www",
     "start": "node ./bin/www"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=10.15.0"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -14,7 +15,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
-    "morgan": "~1.9.0",
+    "morgan": "^1.9.1",
     "popper.js": "^1.12.9",
     "serve-favicon": "~2.4.5"
   }
