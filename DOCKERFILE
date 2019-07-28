@@ -1,7 +1,9 @@
-FROM node:latest
+FROM node:12.6
 ADD . /opt/app
 WORKDIR /opt/app
+
+RUN npm i -g nodemon
 RUN npm i
-ENV VIRTUAL_HOST app.web.hackfortress.net
+
 EXPOSE 3000
-CMD npm run start
+CMD npm run debug
