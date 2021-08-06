@@ -1,7 +1,7 @@
-version: '2.4'
+version: "2.4"
 services:
-    hackfortress-starter:
-        build:
-            context: .
-        ports:
-            - 3000
+  hackfortress-starter:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
